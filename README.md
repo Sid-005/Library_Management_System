@@ -21,4 +21,5 @@ Implements basic functions that performs the following tasks:
     - ctypes
     - tkinter
     - mysql.connector
+
 For ideal use of this system, it is recommended to connect it with a database of members or valid users, who are allowed to issue books from the library.
