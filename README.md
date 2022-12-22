@@ -17,7 +17,7 @@ Implements basic functions that performs the following tasks:
   - Search for records of transactions of particular books within the library
   - Add/Delete/Update the books found in the library
   - Allow user to issue/return books found in the library (displays appropriate error messages for error handling)
-  Modules used:
+ Modules used:
     - ctypes
     - tkinter
     - mysql.connector
