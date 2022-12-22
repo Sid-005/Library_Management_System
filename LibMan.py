@@ -1,4 +1,4 @@
-pas = ''
+pas = '' # to store the root user password
 import ctypes
 import tkinter
 ctypes.windll.shcore.SetProcessDpiAwareness(1)   # to increase clarity
