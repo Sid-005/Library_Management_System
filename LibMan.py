@@ -6,11 +6,13 @@ ctypes.windll.shcore.SetProcessDpiAwareness(1)   # to increase clarity
 # View Transactions (5)______________________________________________________________________________________________________________________ 
 L3 = []
 def return_3(e):
+    """Function used to return values inserted into the entry widget of tkinter module for further processing"""
     global L3
     x = e.widget.get()
     L3.append(x)
     
 def history():
+    """Function to view all the transactions that have been carried out within the library"""
     import mysql.connector
     global pas
     db = mysql.connector.connect(
@@ -35,6 +37,7 @@ def history():
     db.close()
 
 def search ():
+    """Function to search all the transactions tha have been carried out for instances of a particular entry"""
     global L3
     name = L3[0]
     libid = L3[1]
@@ -68,6 +71,7 @@ def search ():
         L3 = []
 
 def transac():
+    """Function to generate the window to carry out the transaction review processes"""
     window = tkinter.Toplevel()
     window.title("Transactions")
     window.geometry ("700x480")
@@ -94,11 +98,13 @@ def transac():
 #__________issue (4) __________________________________________________________________________________________________________________________________
 L2 = []
 def return_2(e):
+    """Function used to return values inserted into the entry widget of tkinter module for further processing"""
     global L2
     x = e.widget.get()
     L2.append(x)
 
 def add_2():
+    """Function to add new transaction to the table storing all th transactions within the database"""
     global L2
     LibID = L2[0]
     Name = L2[1]
@@ -146,6 +152,7 @@ def add_2():
 
 
 def issue():
+    """Function to generate the window for allowing the user to issue books"""
     lib=tkinter.Toplevel()
 
     #Title/Window size
@@ -185,11 +192,13 @@ def issue():
 L = []
 
 def return_1(e):
+    """Function used to return values inserted into the entry widget of tkinter module for further processing"""
     global L
     x = e.widget.get()
     L.append(x)
 
 def delete():
+    """Function to allow user to delete entries of books found in the library"""
     global L
     name = L[0]
     number = L[1]
@@ -208,6 +217,7 @@ def delete():
     L = []
 
 def add():
+    """Function to allow the user to add new entries for books found in the library"""
     global L
     name = L[0]
     number = L[1]
@@ -228,6 +238,7 @@ def add():
 
 
 def obtain():
+    """Function to display all the books available in the library"""
     import mysql.connector
     db = mysql.connector.connect(
         host = "localhost",
@@ -251,7 +262,7 @@ def obtain():
 
 
 def booklog():
-    
+    """Function to generate the window for allowing the user to view all the books available in the library"""
     window = tkinter.Toplevel()
     window.title("Book Log")
     window.geometry ("700x480")
@@ -277,7 +288,7 @@ def booklog():
     
 # Menu for choosing (2) _________________________________________________________________________________________________________
 def new():
-    
+    """Function to generate the main window of the program"""
     
     main = tkinter.Tk()
     main.title("LIBRARY DATABASE")
@@ -296,6 +307,7 @@ def new():
 
 # Login Window (1) ______________________________________________________________________________________________________________  
 def button_click():
+    """Function to create a new database if the database does not already exist on the computer"""
     import mysql.connector
     global pas
     try:
@@ -325,10 +337,11 @@ def button_click():
     
     
 def r(e):
+    """Function used to return values inserted into the entry widget of tkinter module for further processing"""
     global pas
     pas = e.widget.get()
 
-
+# main
 win = tkinter.Tk()
 win.geometry = ("750x 220")
 f = tkinter.Frame (win, bg = "grey60", width = "750", height = "220").pack()
