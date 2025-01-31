@@ -1,5 +1,5 @@
 # Library_Management_System
-Stores the files containing the source code for the library management system created for the purpose of my high-school year end project
+A full stack library management system that utilizes MySQL for the backend and Python's tkinter framework for the frontend interface, further modified by the Ctypes library to enhance visual effects and cues.
 
 PRE-REQUISITES:
 1. Computer must have Python3 (versions Python 3.6 or later)
